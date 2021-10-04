@@ -6,7 +6,8 @@ class Solution:
         for i in range(n//2):
             a = [nums[i],nums[n-i-1]]
             pair.append(a)
-        ans = []
+            
+        m = 0
         for i,j in pair:
-            ans.append(i+j)
-        return max(ans)
+            m = max(i+j, m)
+        return m
